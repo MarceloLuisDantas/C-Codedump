@@ -3,7 +3,7 @@
 
 struct Node {
     struct Node *next;
-    int  value;
+    int  value; 
 } typedef Node;
 
 struct LinkedList {

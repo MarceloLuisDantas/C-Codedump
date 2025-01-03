@@ -7,6 +7,7 @@ struct Stack {
     int maxLen;
 } typedef Stack;
 
+// Cria uma stack vazia do tamanho passado
 Stack newStack(int size) {
     Stack s;
     s.lista = (int *)malloc(size * sizeof(int));
@@ -19,6 +20,7 @@ Stack newStack(int size) {
     return s;
 }
 
+// Adiciona no topo da stack o valor passado
 void push(Stack *s, int value) {
     if (s->len >= s->maxLen) {
         printf("Tamanho maximo atingindo, criando um novo array maior\n");
@@ -34,6 +36,9 @@ void push(Stack *s, int value) {
     s->len += 1;
 }
 
+
+// Remove o valor no topo da stack
+// Retorna 0 se a lista for vazia
 int pop(Stack *s) {
     if (s->len <= 0) 
         return 0;
@@ -44,6 +49,8 @@ int pop(Stack *s) {
     return retorno;
 }
 
+// Retorna um valor
+// Retorna 0 se a lista for vazia 
 int get(const Stack *s, int index) {
     if (index >= s->len) {
         printf("Indexe fora dos limites");
