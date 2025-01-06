@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include "./doubleLinkedList.c"
-
-void print_erro(char label[90], int esperado, int recebido) {
-    printf(label);
-    printf("        Valor esperado: %d\n", esperado);
-    printf("        Valor recebido: %d\n", recebido);
-}
+#include "../../../utest.c"
 
 // Teste para verificar se addNode e get estão funcionando
 void test_1() {
@@ -579,19 +574,6 @@ void test_5() {
     
     printf("Test 5 - Ok\n");
     return 0;
-}
-
-int compListas(int *lista1, int *lista2, int len) {
-    for (int i = 0; i < len; i++) {
-        int v1 = lista1[i];
-        int v2 = lista2[i];
-        // printf("Valor Lista 1 - %d\n", v1);
-        // printf("Valor Lista 2 - %d\n", v2);
-        if (v2 != v2) 
-            return 0;
-    }
-        
-    return 1;
 }
 
 // Teste para verificar se toArray esta funcionando
