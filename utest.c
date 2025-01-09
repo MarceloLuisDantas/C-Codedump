@@ -24,7 +24,7 @@ int compListas(int *lista1, int *lista2, int len) {
         int v2 = lista2[i];
         // printf("Valor Lista 1 - %d\n", v1);
         // printf("Valor Lista 2 - %d\n", v2);
-        if (v2 != v2) 
+        if (v1 != v2) 
             return 0;
     }
         
