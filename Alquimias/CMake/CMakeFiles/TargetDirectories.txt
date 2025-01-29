@@ -1,0 +1,4 @@
+/home/marcelo/Documentos/C/Alquimias/CMake/CMakeFiles/builds.dir
+/home/marcelo/Documentos/C/Alquimias/CMake/CMakeFiles/main.dir
+/home/marcelo/Documentos/C/Alquimias/CMake/CMakeFiles/edit_cache.dir
+/home/marcelo/Documentos/C/Alquimias/CMake/CMakeFiles/rebuild_cache.dir

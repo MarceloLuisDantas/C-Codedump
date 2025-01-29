@@ -43,10 +43,6 @@ ArrayString *newArrayString(size_t capacity) {
     return as;
 }
 
-// ==================================================
-// ============== FUNCTIONS TO STRINGS ============== 
-// ==================================================
-
 size_t count(String *s, char item) {
     size_t total = 0;
     for (int i = 0; i < s->len; i++)
@@ -114,15 +110,76 @@ String *getSlice(String *s, size_t from, size_t to) {
     return ns;
 }
 
-// TODO -
-void trim() { }
-void remove_white_space() { }
-void split() { }
+void trim_left(String **s) {
+    if ((*s)->len == 0) 
+        return;
 
-// ==================================================
-// ========= FUNCTIONS TO ARRAYS OF STRINGS ========= 
-// ==================================================
+    if ((*s)->array[0] != ' ')
+        return;
 
+    int remove = 0;
+    for (int i = 0; i < (*s)->len; i++) {
+        if ((*s)->array[i] != ' ')
+            break;
+        remove += 1;
+    }
+
+    if (remove == (*s)->len) {
+        free((*s)->array);
+        (*s)->array = NULL;
+        (*s)->len = 0;
+        return;
+    }
+
+    size_t newLen = (*s)->len - remove;
+    String *ns = newString(newLen);
+    for (int i = 0; i < ns->len; i++)
+        ns->array[i] = (*s)->array[i + remove];
+    
+    free((*s)->array);
+    free((*s));
+    (*s) = ns;
+}
+
+void trim_right(String **s) {
+    if ((*s)->len == 0) 
+        return;
+
+    if ((*s)->array[(*s)->len - 1] != ' ')
+        return;
+
+    int remove = 0;
+    for (int i = (*s)->len - 1; i >= 0; i--) {
+        if ((*s)->array[i] != ' ')
+            break;
+        remove += 1;
+    }
+
+    if (remove == (*s)->len) {
+        free((*s)->array);
+        (*s)->array = NULL;
+        (*s)->len = 0;
+        return;
+    }
+
+    size_t newLen = (*s)->len - remove;
+    String *ns = newString(newLen);
+    for (int i = 0; i < ns->len; i++)
+        ns->array[i] = (*s)->array[i];
+    
+    free((*s)->array);
+    free((*s));
+    (*s) = ns;
+}
+
+/*  Remove all extra spaces in the start/end of a String 
+    if the string is only spaces ["     "], a null pointer
+    will be alloced to String.array;
+*/
+void trim(String **s) {
+    trim_left(s);
+    trim_right(s);
+}
 
 // Pushs the value in the Array, returns -1 if full
 int ASPush(ArrayString *as, String *string) {
@@ -159,3 +216,83 @@ String *arrayToString(ArrayString *as) {
 
     return s;
 }
+
+int count_words(String *s) {
+    if (s->len == 0) 
+        return 0;
+
+    int words = 0;
+    int spaces = 0;
+    for (int i = 0; i < s->len; i++) {
+        if (s->array[i] == ' ' && spaces == 0) {
+            words += 1;
+            spaces = 1;
+        } else if (s->array[i] != ' ')
+            spaces = 0;
+    }
+    words += 1;
+
+    return words;
+}
+
+/*  Remove all extra spaces of a String 
+    if the string is only spaces ["     "], a null pointer
+    will be alloced to String.array;
+*/
+void remove_white_space(String **s) {
+    trim(s);
+    if ((*s)->len == 0)
+        return;
+
+    int words = count_words(*s);
+    ArrayString *as = newArrayString(words);
+    
+    int from = 0;
+    int spaces = 0;
+    for (int i = 0; i < (*s)->len; i++) {
+        if ((*s)->array[i] == ' ' && spaces == 0) {
+            spaces = 1;
+            ASPush(as, getSlice((*s), from, i - 1));
+        } else if ((*s)->array[i] != ' ' && spaces == 1) {
+            from = i;
+            spaces = 0;
+        }
+    }
+    ASPush(as, getSlice((*s), from, (*s)->len - 1));
+
+    free((*s)->array);
+    free((*s));
+    (*s) = arrayToString(as);
+}
+
+/*  Splits a String in a Array of Strings, all the extra
+    spaces in the string will be removed before split.
+    Empty strings will return NULL.
+*/ 
+ArrayString *split(String *s, const char spliter) {
+    remove_white_space(&s);
+    if (s->len == 0) 
+        return NULL;
+
+    int words = count_words(s);
+    ArrayString *as = newArrayString(words);
+    
+    int from = 0;
+    int spaces = 0;
+    for (int i = 0; i < s->len; i++) {
+        if (s->array[i] == spliter && spaces == 0) {
+            spaces = 1;
+            ASPush(as, getSlice(s, from, i - 1));
+        } else if (s->array[i] != spliter && spaces == 1) {
+            from = i;
+            spaces = 0;
+        }
+    }
+    ASPush(as, getSlice(s, from, s->len - 1));
+
+    return as;
+}
+
+
+
+

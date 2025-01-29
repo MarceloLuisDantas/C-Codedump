@@ -9,3 +9,6 @@ Repositorio para guardar codigos em C
 
 ## Algoritmos (Em ordem de criação)
 - [Bubble Sort](./Algoritmos/Sort/Bubble%20Sort/bubbleSort.c)
+
+## Minhas Libs
+- [String](./My%20LIbs/Strings)

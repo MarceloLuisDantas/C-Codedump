@@ -1,0 +1,3 @@
+/home/marcelo/Documentos/C/Alquimias/Strings/CMakeFiles/main.dir
+/home/marcelo/Documentos/C/Alquimias/Strings/CMakeFiles/edit_cache.dir
+/home/marcelo/Documentos/C/Alquimias/Strings/CMakeFiles/rebuild_cache.dir

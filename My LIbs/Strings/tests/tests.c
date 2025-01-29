@@ -8,10 +8,10 @@ int runTest(int (*test)(), int number, const char *test_name) {
     printf("Running test %d - %s\n", number, test_name);
     int result = test();
     if (result == FALSE) {
-        printf("Teste %d - %s, DO NOT PASS\n", number, test_name);
+        printf("Teste %d - %s, DO NOT PASS\n\n", number, test_name);
         return FALSE;
     }
-    printf("Teste %d - %s, PASS\n", number, test_name);
+    printf("Teste %d - %s, PASS\n\n", number, test_name);
     return TRUE;
 }
 
@@ -113,6 +113,201 @@ int slice() {
     return TRUE;
 }
 
+int trim_left_test() {
+    String *s_ee = CStringToString("    teste     teste      teste    ");  
+    trim_left(&s_ee);
+    if (StringCmp(s_ee, CStringToString("teste     teste      teste    ")) != TRUE) {
+        printf("Unespected String value\n");
+        printf("Expected \"teste teste teste\"\n");
+        printf("Received '%s'\n", s_ee->array);
+        return FALSE;
+    }
+    
+    String *emptys = CStringToString("     ");
+    trim_left(&emptys);
+    if (emptys->array != NULL) {
+        printf("Empty String shoulda be NULL after trim\n");
+        return FALSE;
+    }
+
+    String *s = CStringToString("    te   ste");
+    trim_left(&s);
+    if (StringCmp(s, CStringToString("te   ste")) != TRUE) {
+        printf("Unespected string value\n");
+        printf("Expected \"te   ste\"\n");
+        printf("Received '%s'\n", s->array);
+        return FALSE;
+    }
+
+    String *s2 = CStringToString("te   ste");
+    trim_left(&s2);
+    if (StringCmp(s2, CStringToString("te   ste")) != TRUE) {
+        printf("Unespected string value\n");
+        printf("Expected \"te   ste\"\n");
+        printf("Received '%s'\n", s2->array);
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
+int trim_right_test() {
+    String *s_ee = CStringToString("    teste     teste      teste    ");  
+    trim_right(&s_ee);
+    if (StringCmp(s_ee, CStringToString("    teste     teste      teste")) != TRUE) {
+        printf("Unespected String value\n");
+        printf("Expected \"teste teste teste\"\n");
+        printf("Received '%s'\n", s_ee->array);
+        return FALSE;
+    }
+
+    String *emptys = CStringToString("     ");
+    trim_right(&emptys);
+    if (emptys->array != NULL) {
+        printf("Empty String shoulda be NULL after trim\n");
+        return FALSE;
+    }
+
+    String *s = CStringToString("te   ste    ");
+    trim_right(&s);
+    if (StringCmp(s, CStringToString("te   ste")) != TRUE) {
+        printf("Unespected string value\n");
+        printf("Expected \"te   ste\"\n");
+        printf("Received '%s'\n", s->array);
+        return FALSE;
+    }
+
+    String *s2 = CStringToString("te   ste");
+    trim_right(&s2);
+    if (StringCmp(s2, CStringToString("te   ste")) != TRUE) {
+        printf("Unespected string value\n");
+        printf("Expected \"te   ste\"\n");
+        printf("Received '%s'\n", s2->array);
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
+int trim_test() {
+    String *emptys = CStringToString("     ");
+    trim(&emptys);
+    if (emptys->array != NULL) {
+        printf("Empty String shoulda be NULL after trim\n");
+        return FALSE;
+    }
+
+    String *s = CStringToString("     te   ste    ");
+    trim(&s);
+    if (StringCmp(s, CStringToString("te   ste")) != TRUE) {
+        printf("Unespected string value\n");
+        printf("Expected \"te   ste\"\n");
+        printf("Received '%s'\n", s->array);
+        return FALSE;
+    }
+
+    String *s2 = CStringToString("te   ste");
+    trim(&s2);
+    if (StringCmp(s2, CStringToString("te   ste")) != TRUE) {
+        printf("Unespected string value\n");
+        printf("Expected \"te   ste\"\n");
+        printf("Received '%s'\n", s2->array);
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
+int remove_spaces_test() {
+    String *nulls = CStringToString("        ");
+    remove_white_space(&nulls);
+    if (nulls->array != NULL) {
+        printf("String should be NULL\n");
+        printf("Expected NULL\n");
+        printf("Received '%s'\n", nulls->array);
+        return FALSE;
+    }
+    
+    String *s = CStringToString("    teste     teste      teste    ");
+    remove_white_space(&s);
+    if (StringCmp(s, CStringToString("teste teste teste")) != TRUE) {
+        printf("Unespected String value\n");
+        printf("Expected \"teste teste teste\"\n");
+        printf("Received '%s'\n", s->array);
+        return FALSE;
+    }
+
+    String *s2 = CStringToString("    teste     teste      teste");
+    remove_white_space(&s2);
+    if (StringCmp(s2, CStringToString("teste teste teste")) != TRUE) {
+        printf("Unespected String value\n");
+        printf("Expected \"teste teste teste\"\n");
+        printf("Received '%s'\n", s2->array);
+        return FALSE;
+    }
+
+    String *s3 = CStringToString("teste     teste      teste");
+    remove_white_space(&s3);
+    if (StringCmp(s3, CStringToString("teste teste teste")) != TRUE) {
+        printf("Unespected String value\n");
+        printf("Expected \"teste teste teste\"\n");
+        printf("Received '%s'\n", s3->array);
+        return FALSE;
+    }
+
+    String *s4 = CStringToString("teste teste teste");
+    remove_white_space(&s4);
+    if (StringCmp(s3, CStringToString("teste teste teste")) != TRUE) {
+        printf("Unespected String value\n");
+        printf("Expected \"teste teste teste\"\n");
+        printf("Received '%s'\n", s4->array);
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
+int split_test() {
+    String *nul = CStringToString("  ");
+    ArrayString *snull = split(nul, ' ');
+    if (snull != NULL) {
+        printf("Array should be null");
+        return FALSE;
+    }
+
+    String *s = CStringToString("   teste   teste   teste  ");
+    ArrayString *as = split(s, ' ');
+    if (as->len != 3) {
+        printf("The Splited Array should be 3 len\n");
+        String *b = arrayToString(as);
+        printf("Expected: \"teste teste teste\"\n");
+        printf("Received: \"%s\"\n", b->array);
+        return FALSE;
+    }
+
+    String *s2 = CStringToString("   teste   teste   ");
+    ArrayString *as2 = split(s2, ' ');
+    if (as2->len != 2) {
+        printf("The Splited Array should be 2 len\n");
+        String *b = arrayToString(as2);
+        printf("Expected: \"teste teste\"\n");
+        printf("Received: \"%s\"\n", b->array);
+        return FALSE;
+    }
+
+    String *s3 = CStringToString("teste   teste");
+    ArrayString *as3 = split(s3, ' ');
+    if (as3->len != 2) {
+        printf("The Splited Array should be 2 len\n");
+        String *b = arrayToString(as3);
+        printf("Expected: \"teste teste\"\n");
+        printf("Received: \"%s\"\n", b->array);
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
 // ===============================================
 // ======== STRING ARRAY FUNCTIONS TESTES ======== 
 // ===============================================
@@ -194,11 +389,20 @@ int array_to_string() {
     return TRUE;
 }
 
+// ===============================================
+// ============== RUNNING ALL TESTS ============== 
+// ===============================================
+
 int main() {
     printf("RUNNING Strings Tests ======================================\n");
     runTest(*cstring_to_string, 1, "CString to String");
     runTest(*StringCMP, 2, "Compare Strings");
     runTest(*slice, 3, "Slice");
+    runTest(*trim_left_test, 4, "Trim Left");
+    runTest(*trim_right_test, 5, "Trim Right");
+    runTest(*trim_test, 6, "Trim");
+    runTest(*remove_spaces_test, 7, "Remove Spaces");
+    runTest(*split_test, 8, "Split");
 
     printf("\n");
     printf("RUNNING Array Strings Tests ================================\n");
