@@ -46,9 +46,9 @@ void trim_left(String **s);
 */
 void trim_right(String **s);
 
-/*  Remove all extra spaces in the start/end of a String 
-    if the string is only spaces ["     "], a null pointer
-    will be alloced to String.array;
+/*  Removes all extra spaces in the start end of a String
+    Will set the String->Array to Null and len to 0 
+    if the String is only white spaces
 */
 void trim(String **s);
 
