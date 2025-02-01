@@ -1,12 +1,7 @@
 [
 {
   "directory": "/home/marcelo/Documentos/C/My LIbs/Linked List/build",
-  "command": "/usr/bin/cc  -I\"/home/marcelo/Documentos/C/My LIbs/Linked List/libs\" -g -Wall -Werror -o CMakeFiles/ListTest.dir/ListTest.c.o -c \"/home/marcelo/Documentos/C/My LIbs/Linked List/ListTest.c\"",
-  "file": "/home/marcelo/Documentos/C/My LIbs/Linked List/ListTest.c"
-},
-{
-  "directory": "/home/marcelo/Documentos/C/My LIbs/Linked List/build",
-  "command": "/usr/bin/cc  -I\"/home/marcelo/Documentos/C/My LIbs/Linked List/libs\" -g -Wall -Werror -o CMakeFiles/ListTest.dir/src/LinkedList.c.o -c \"/home/marcelo/Documentos/C/My LIbs/Linked List/src/LinkedList.c\"",
+  "command": "/usr/bin/cc -DLinkedList_EXPORTS -I\"/home/marcelo/Documentos/C/My LIbs/Linked List/libs\" -g -fPIC -Wall -Werror -o CMakeFiles/LinkedList.dir/src/LinkedList.c.o -c \"/home/marcelo/Documentos/C/My LIbs/Linked List/src/LinkedList.c\"",
   "file": "/home/marcelo/Documentos/C/My LIbs/Linked List/src/LinkedList.c"
 }
 ]

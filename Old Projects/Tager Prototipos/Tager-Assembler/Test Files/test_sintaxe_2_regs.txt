@@ -1,0 +1,10 @@
+; Correct
+mov     $a1 $a2        ; a1 = a2
+
+; Incorrect
+mov     a1 $a2        ; a1 = a2
+mov     $a1 a2        ; a1 = a2
+mov     $a2           ; a1 = a2
+mov     a2            ; a1 = a2
+mov                   ; a1 = a2
+

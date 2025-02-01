@@ -1,0 +1,22 @@
+nop
+add     $a1 $a2 $a3    ; a1 = a2 + a3                  
+addi    $a1 $a2 100    ; a1 = a2 + 100
+sub     $a1 $a2 $a3    ; a1 = a2 - a3
+subi    $a1 $a2 100    ; a1 = a2 - 100
+mut     $a1 $a2 $a3    ; a1 = a2 * a3
+muti    $a1 $a2 100    ; a1 = a2 * 100
+div     $a1 $a2 $a3    ; a1 = a2 / a3
+divi    $a1 $a2 100    ; a1 = a2 / 100
+and     $a1 $a2 $a3    ; a1 = a2 & a3
+or      $a1 $a2 $a3    ; a1 = a2 | a3
+sl      $a1 $a2 2      ; a1 = a2 << 2
+sr      $a1 $a2 2      ; a1 = a2 >> 2
+mov     $a1 $a2        ; a1 = a2
+jump    label          ; 
+jal     label          ; 
+jr      $a1            ;
+
+slt     $a1 $a2 $a3    ; if (a2 < a3) a1 = 1 else a1 = 0
+slti    $a1 $a2 100    ; if (a2 < 100) a1 = 1 else a1 = 0
+beq     $a1 $a2 label  ; if (a1 == a2) jump label
+bne     $a1 $a2 label  ; if (a1 != a2) jump label

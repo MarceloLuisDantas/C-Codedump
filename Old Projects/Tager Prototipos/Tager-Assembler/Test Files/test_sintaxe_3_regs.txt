@@ -1,0 +1,17 @@
+; Correct
+add     $a1 $a2 $a3    ; a1 = a2 + a3                  
+sub     $a1 $a2 $a3    ; a1 = a2 - a3
+mut     $a1 $a2 $a3    ; a1 = a2 * a3
+div     $a1 $a2 $a3    ; a1 = a2 / a3
+and     $a1 $a2 $a3    ; a1 = a2 & a3
+or      $a1 $a2 $a3    ; a1 = a2 | a3
+slt     $a1 $a2 $a3    ; if (a2 < a3) a1 = 1 else a1 = 0
+
+; Incorrect
+add     a1 $a2 $a3     ; a1 = a2 + a3                  
+sub     a $a2 $a3      ; a1 = a2 - a3
+mut     $a1 a2 $a3     ; a1 = a2 * a3
+div     $a1 a $a3      ; a1 = a2 / a3
+and     $a1 $a2 a3     ; a1 = a2 & a3
+or      $a1 $a2 a      ; a1 = a2 | a3
+slt     a1 a a3        ; if (a2 < a3) a1 = 1 else a1 = 0

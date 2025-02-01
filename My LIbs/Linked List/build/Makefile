@@ -117,48 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ListTest
+# Target rules for targets named LinkedList
 
 # Build rule for target.
-ListTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ListTest
-.PHONY : ListTest
+LinkedList: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LinkedList
+.PHONY : LinkedList
 
 # fast build rule for target.
-ListTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ListTest.dir/build.make CMakeFiles/ListTest.dir/build
-.PHONY : ListTest/fast
-
-ListTest.o: ListTest.c.o
-.PHONY : ListTest.o
-
-# target to build an object file
-ListTest.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ListTest.dir/build.make CMakeFiles/ListTest.dir/ListTest.c.o
-.PHONY : ListTest.c.o
-
-ListTest.i: ListTest.c.i
-.PHONY : ListTest.i
-
-# target to preprocess a source file
-ListTest.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ListTest.dir/build.make CMakeFiles/ListTest.dir/ListTest.c.i
-.PHONY : ListTest.c.i
-
-ListTest.s: ListTest.c.s
-.PHONY : ListTest.s
-
-# target to generate assembly for a file
-ListTest.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ListTest.dir/build.make CMakeFiles/ListTest.dir/ListTest.c.s
-.PHONY : ListTest.c.s
+LinkedList/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LinkedList.dir/build.make CMakeFiles/LinkedList.dir/build
+.PHONY : LinkedList/fast
 
 src/LinkedList.o: src/LinkedList.c.o
 .PHONY : src/LinkedList.o
 
 # target to build an object file
 src/LinkedList.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ListTest.dir/build.make CMakeFiles/ListTest.dir/src/LinkedList.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LinkedList.dir/build.make CMakeFiles/LinkedList.dir/src/LinkedList.c.o
 .PHONY : src/LinkedList.c.o
 
 src/LinkedList.i: src/LinkedList.c.i
@@ -166,7 +142,7 @@ src/LinkedList.i: src/LinkedList.c.i
 
 # target to preprocess a source file
 src/LinkedList.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ListTest.dir/build.make CMakeFiles/ListTest.dir/src/LinkedList.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LinkedList.dir/build.make CMakeFiles/LinkedList.dir/src/LinkedList.c.i
 .PHONY : src/LinkedList.c.i
 
 src/LinkedList.s: src/LinkedList.c.s
@@ -174,7 +150,7 @@ src/LinkedList.s: src/LinkedList.c.s
 
 # target to generate assembly for a file
 src/LinkedList.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ListTest.dir/build.make CMakeFiles/ListTest.dir/src/LinkedList.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LinkedList.dir/build.make CMakeFiles/LinkedList.dir/src/LinkedList.c.s
 .PHONY : src/LinkedList.c.s
 
 # Help Target
@@ -185,10 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ListTest"
-	@echo "... ListTest.o"
-	@echo "... ListTest.i"
-	@echo "... ListTest.s"
+	@echo "... LinkedList"
 	@echo "... src/LinkedList.o"
 	@echo "... src/LinkedList.i"
 	@echo "... src/LinkedList.s"

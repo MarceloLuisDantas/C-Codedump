@@ -1,0 +1,23 @@
+3º Etapa
+Juntando os labels com as linhas correspondentes. 
+Essa etapa serve para substituir os labels pelo numero a qual o label corresponde.
+
+
+jump _main
+_soma: add a0 a1 a2
+       jr ra
+_divide: divi a0 a0 2
+         jr ra
+_multiplica: muli a0 a0 2
+             jr ra
+_main: addi a1 zero 10
+       addi a2 zero 20
+       jal _soma
+       addi t0 zero 30
+       slt at a0 t0
+       beq at zero else
+       jal _divide
+       jump end
+else:  jal _multiplica
+end:   addi a0 zero 1
+       syscall

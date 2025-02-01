@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = "/home/marcelo/Documentos/C/My LIbs/Linked List"
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/ListTest.dir/all
+all: CMakeFiles/LinkedList.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/ListTest.dir/clean
+clean: CMakeFiles/LinkedList.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ListTest.dir
+# Target rules for target CMakeFiles/LinkedList.dir
 
 # All Build rule for target.
-CMakeFiles/ListTest.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ListTest.dir/build.make CMakeFiles/ListTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ListTest.dir/build.make CMakeFiles/ListTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/marcelo/Documentos/C/My LIbs/Linked List/CMakeFiles" --progress-num=1,2,3 "Built target ListTest"
-.PHONY : CMakeFiles/ListTest.dir/all
+CMakeFiles/LinkedList.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LinkedList.dir/build.make CMakeFiles/LinkedList.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LinkedList.dir/build.make CMakeFiles/LinkedList.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/marcelo/Documentos/C/My LIbs/Linked List/CMakeFiles" --progress-num=1,2 "Built target LinkedList"
+.PHONY : CMakeFiles/LinkedList.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ListTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/marcelo/Documentos/C/My LIbs/Linked List/CMakeFiles" 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ListTest.dir/all
+CMakeFiles/LinkedList.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/marcelo/Documentos/C/My LIbs/Linked List/CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/LinkedList.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/marcelo/Documentos/C/My LIbs/Linked List/CMakeFiles" 0
-.PHONY : CMakeFiles/ListTest.dir/rule
+.PHONY : CMakeFiles/LinkedList.dir/rule
 
 # Convenience name for target.
-ListTest: CMakeFiles/ListTest.dir/rule
-.PHONY : ListTest
+LinkedList: CMakeFiles/LinkedList.dir/rule
+.PHONY : LinkedList
 
 # clean rule for target.
-CMakeFiles/ListTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ListTest.dir/build.make CMakeFiles/ListTest.dir/clean
-.PHONY : CMakeFiles/ListTest.dir/clean
+CMakeFiles/LinkedList.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LinkedList.dir/build.make CMakeFiles/LinkedList.dir/clean
+.PHONY : CMakeFiles/LinkedList.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

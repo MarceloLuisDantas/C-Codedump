@@ -1,0 +1,32 @@
+Assembly escrito
+
+jump _main
+
+; soma os numeros em a1 e a2 e salva em a0
+_soma:
+    add a0 a1 a2
+    jr ra
+
+; divide o valor em a0 por 2
+_divide:
+    divi a0 a0 2
+    jr ra
+
+; multiplicao valor em a0 por 2
+_multiplica:
+    muli a0 a0 2
+    jr ra
+
+_main:
+    li a1 10
+    li a2 20
+    jal _soma
+    li t0 30
+    ble a0 t0 else
+        jal _divide
+        jump end
+    else:   
+        jal _multiplica
+end:
+    li a0 1
+    syscall

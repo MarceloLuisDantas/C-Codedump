@@ -1,0 +1,26 @@
+; Correct
+addi    $a1 $a2 100    ; a1 = a2 + 100
+subi    $a1 $a2 100    ; a1 = a2 - 100
+muti    $a1 $a2 100    ; a1 = a2 * 100
+divi    $a1 $a2 100    ; a1 = a2 / 100
+sl      $a1 $a2 2      ; a1 = a2 << 2
+sr      $a1 $a2 2      ; a1 = a2 >> 2
+slti    $a1 $a2 100    ; if (a2 < 100) a1 = 1 else a1 = 0
+
+beq     $a1 $a2 label  ; if (a1 == a2) jump label
+bne     $a1 $a2 label  ; if (a1 != a2) jump label
+
+
+; Incorrect
+addi    $a2 100       ; a1 = a2 + 100
+subi    $a1 $a2 a     ; a1 = a2 - 100
+muti    $a1 100       ; a1 = a2 * 100
+divi    a1 $a2 100    ; a1 = a2 / 100
+sl      $a1 a2 2      ; a1 = a2 << 2
+sr      $a1 $a2 2     ; a1 = a2 >> 2
+slti    $a1 $a2 100   ; if (a2 < 100) a1 = 1 else a1 = 0
+
+beq     a1 $a2 label  ; if (a1 == a2) jump label
+beq     $a1 $a2       ; if (a1 == a2) jump label
+bne     $a1 a2 label  ; if (a1 != a2) jump label
+bne     $a1 $a2 1     ; if (a1 != a2) jump label

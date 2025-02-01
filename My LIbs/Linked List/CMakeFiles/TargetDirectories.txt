@@ -1,3 +1,3 @@
-/home/marcelo/Documentos/C/My LIbs/Linked List/CMakeFiles/ListTest.dir
+/home/marcelo/Documentos/C/My LIbs/Linked List/CMakeFiles/LinkedList.dir
 /home/marcelo/Documentos/C/My LIbs/Linked List/CMakeFiles/edit_cache.dir
 /home/marcelo/Documentos/C/My LIbs/Linked List/CMakeFiles/rebuild_cache.dir
