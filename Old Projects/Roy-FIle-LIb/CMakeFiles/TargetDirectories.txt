@@ -1,0 +1,3 @@
+/home/marcelo/Documentos/Roy-FIle-LIb/CMakeFiles/roy.dir
+/home/marcelo/Documentos/Roy-FIle-LIb/CMakeFiles/edit_cache.dir
+/home/marcelo/Documentos/Roy-FIle-LIb/CMakeFiles/rebuild_cache.dir
