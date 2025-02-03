@@ -22,7 +22,7 @@ LinkedList *newLinkedList();
 /*  Creates a new node and put in the end of the list.
     Empty Strings will be ignored, and 1 will be returned;
 */
-void add(LinkedList *l, char *value);
+int add(LinkedList *l, char *value);
 
 /*  Returns the pointer String saved in the index.
     Returns NULL if out of bounds;
