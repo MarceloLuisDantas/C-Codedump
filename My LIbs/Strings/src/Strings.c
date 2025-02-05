@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 #define TRUE 1
 #define FALSE 0
@@ -293,6 +294,12 @@ ArrayString *split(String *s, const char spliter) {
     return as;
 }
 
-
+// Converts the String back to a CString with the '/0' 
+char *StringToCString(String *s) {
+    char *cs = malloc(sizeof(char) * s->len + 1);
+    strncpy(cs, s->array, s->len);
+    cs[s->len] = '\0';
+    return cs;
+}
 
 

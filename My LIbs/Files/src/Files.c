@@ -49,7 +49,6 @@ File *loadFile(const char *file_path) {
     Empty Strings will be ignored, and 1 will be returned
 */
 int addLine(File *file, char *new_string) {
-    printf("%s\n", new_string);
     int x = add(file->lines, new_string);
     if (x == 0) 
         file->len += 1;
@@ -104,7 +103,7 @@ void saveIntoFile(File *file, char *file_path) {
 
     Node *sup = file->lines->start;
     while (sup != NULL) {
-        fprintf(fp, "%s\n", sup->value->array);
+        fprintf(fp, "%s\n", StringToCString(sup->value));
         sup = sup->next;
     }
 

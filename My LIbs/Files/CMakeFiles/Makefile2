@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = "/home/marcelo/Documentos/C/My LIbs/Files"
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/TestFiles.dir/all
+all: CMakeFiles/Files.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/TestFiles.dir/clean
+clean: CMakeFiles/Files.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TestFiles.dir
+# Target rules for target CMakeFiles/Files.dir
 
 # All Build rule for target.
-CMakeFiles/TestFiles.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFiles.dir/build.make CMakeFiles/TestFiles.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFiles.dir/build.make CMakeFiles/TestFiles.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/marcelo/Documentos/C/My LIbs/Files/CMakeFiles" --progress-num=1,2,3 "Built target TestFiles"
-.PHONY : CMakeFiles/TestFiles.dir/all
+CMakeFiles/Files.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Files.dir/build.make CMakeFiles/Files.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Files.dir/build.make CMakeFiles/Files.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/marcelo/Documentos/C/My LIbs/Files/CMakeFiles" --progress-num=1,2 "Built target Files"
+.PHONY : CMakeFiles/Files.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TestFiles.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/marcelo/Documentos/C/My LIbs/Files/CMakeFiles" 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TestFiles.dir/all
+CMakeFiles/Files.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/marcelo/Documentos/C/My LIbs/Files/CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Files.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/marcelo/Documentos/C/My LIbs/Files/CMakeFiles" 0
-.PHONY : CMakeFiles/TestFiles.dir/rule
+.PHONY : CMakeFiles/Files.dir/rule
 
 # Convenience name for target.
-TestFiles: CMakeFiles/TestFiles.dir/rule
-.PHONY : TestFiles
+Files: CMakeFiles/Files.dir/rule
+.PHONY : Files
 
 # clean rule for target.
-CMakeFiles/TestFiles.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFiles.dir/build.make CMakeFiles/TestFiles.dir/clean
-.PHONY : CMakeFiles/TestFiles.dir/clean
+CMakeFiles/Files.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Files.dir/build.make CMakeFiles/Files.dir/clean
+.PHONY : CMakeFiles/Files.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

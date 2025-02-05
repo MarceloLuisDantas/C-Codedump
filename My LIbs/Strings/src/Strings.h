@@ -75,4 +75,8 @@ String *arrayToString(ArrayString *as);
 // Pushs the value in the Array, returns -1 if full
 int ASPush(ArrayString *as, String *string);
 
+// Converts the String back to a CString with the '/0' 
+char *StringToCString(String *s);
+
+
 #endif

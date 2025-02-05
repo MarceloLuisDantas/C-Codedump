@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TestFiles
+# Target rules for targets named Files
 
 # Build rule for target.
-TestFiles: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestFiles
-.PHONY : TestFiles
+Files: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Files
+.PHONY : Files
 
 # fast build rule for target.
-TestFiles/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFiles.dir/build.make CMakeFiles/TestFiles.dir/build
-.PHONY : TestFiles/fast
+Files/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Files.dir/build.make CMakeFiles/Files.dir/build
+.PHONY : Files/fast
 
 src/Files.o: src/Files.c.o
 .PHONY : src/Files.o
 
 # target to build an object file
 src/Files.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFiles.dir/build.make CMakeFiles/TestFiles.dir/src/Files.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Files.dir/build.make CMakeFiles/Files.dir/src/Files.c.o
 .PHONY : src/Files.c.o
 
 src/Files.i: src/Files.c.i
@@ -142,7 +142,7 @@ src/Files.i: src/Files.c.i
 
 # target to preprocess a source file
 src/Files.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFiles.dir/build.make CMakeFiles/TestFiles.dir/src/Files.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Files.dir/build.make CMakeFiles/Files.dir/src/Files.c.i
 .PHONY : src/Files.c.i
 
 src/Files.s: src/Files.c.s
@@ -150,32 +150,8 @@ src/Files.s: src/Files.c.s
 
 # target to generate assembly for a file
 src/Files.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFiles.dir/build.make CMakeFiles/TestFiles.dir/src/Files.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Files.dir/build.make CMakeFiles/Files.dir/src/Files.c.s
 .PHONY : src/Files.c.s
-
-tests/tests.o: tests/tests.c.o
-.PHONY : tests/tests.o
-
-# target to build an object file
-tests/tests.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFiles.dir/build.make CMakeFiles/TestFiles.dir/tests/tests.c.o
-.PHONY : tests/tests.c.o
-
-tests/tests.i: tests/tests.c.i
-.PHONY : tests/tests.i
-
-# target to preprocess a source file
-tests/tests.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFiles.dir/build.make CMakeFiles/TestFiles.dir/tests/tests.c.i
-.PHONY : tests/tests.c.i
-
-tests/tests.s: tests/tests.c.s
-.PHONY : tests/tests.s
-
-# target to generate assembly for a file
-tests/tests.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestFiles.dir/build.make CMakeFiles/TestFiles.dir/tests/tests.c.s
-.PHONY : tests/tests.c.s
 
 # Help Target
 help:
@@ -185,13 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TestFiles"
+	@echo "... Files"
 	@echo "... src/Files.o"
 	@echo "... src/Files.i"
 	@echo "... src/Files.s"
-	@echo "... tests/tests.o"
-	@echo "... tests/tests.i"
-	@echo "... tests/tests.s"
 .PHONY : help
 
 

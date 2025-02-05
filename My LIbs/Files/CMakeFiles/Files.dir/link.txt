@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,libFiles.so -o libFiles.so CMakeFiles/Files.dir/src/Files.c.o   -L"/home/marcelo/Documentos/C/My LIbs/Files/libs"  -Wl,-rpath,"/home/marcelo/Documentos/C/My LIbs/Files/libs" -lStrings -lLinkedList 
