@@ -1,3 +1,0 @@
-/home/marcelo/Documentos/C/My LIbs/Files/CMakeFiles/Files.dir
-/home/marcelo/Documentos/C/My LIbs/Files/CMakeFiles/edit_cache.dir
-/home/marcelo/Documentos/C/My LIbs/Files/CMakeFiles/rebuild_cache.dir

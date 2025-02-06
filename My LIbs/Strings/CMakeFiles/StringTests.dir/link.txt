@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/StringTests.dir/tests/tests.c.o CMakeFiles/StringTests.dir/src/Strings.c.o -o StringTests 

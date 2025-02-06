@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/ListTest.dir/ListTest.c.o CMakeFiles/ListTest.dir/src/LinkedList.c.o -o ListTest   -L"/home/marcelo/Documentos/C/My LIbs/Linked List/libs"  -Wl,-rpath,"/home/marcelo/Documentos/C/My LIbs/Linked List/libs" -lStrings 
