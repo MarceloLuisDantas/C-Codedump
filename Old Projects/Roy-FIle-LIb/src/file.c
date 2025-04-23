@@ -24,7 +24,7 @@ void loadLines(File *f, const char *path) {
     ssize_t len; // Len of the line
     while ((len = getline(&line, &_n, fp)) != -1) {
         if (line[len - 1] == '\n') {    
-            line[len - 1] = '\0';
+            line[(len + 1) - 2] = '\0';
         }
         add(f->lines, line);
     }
