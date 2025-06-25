@@ -1,0 +1,27 @@
+{
+    "project": "double-linked-list",
+    "tests": {
+        "test_node": [
+            "src/dll/node/node_test.c",
+            "src/dll/node/node.c"
+        ],
+        "test_dll": [
+            "src/dll/dll_test.c",
+            "src/dll/DoubleLinkedList.c",
+            "src/dll/node/node.c"
+        ],
+        "test_dll_add": [
+            "src/dll/dll_test_add.c",
+            "src/dll/DoubleLinkedList.c",
+            "src/dll/node/node.c"
+        ],
+        "test_dll_set": [
+            "src/dll/dll_test_set.c",
+            "src/dll/DoubleLinkedList.c",
+            "src/dll/node/node.c"
+        ]
+    },
+    "test_flags": [
+        "-Wall"
+    ]
+}

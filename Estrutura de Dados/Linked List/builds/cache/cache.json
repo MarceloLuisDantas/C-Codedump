@@ -1,0 +1,58 @@
+{
+    "src/dll/node/node_test.c": [
+        1750759716.52523,
+        [
+            "-Wall"
+        ],
+        "ok"
+    ],
+    "src/dll/node/node.c": [
+        1750759519.104192,
+        [
+            "-Wall"
+        ],
+        "ok"
+    ],
+    "src/dll/dll_test.c": [
+        1750764226.0147128,
+        [
+            "-Wall"
+        ],
+        "ok"
+    ],
+    "src/dll/DoubleLinkedList.c": [
+        1750763006.2169232,
+        [
+            "-Wall"
+        ],
+        "ok"
+    ],
+    "src/dll/dll_test_addnode.c": [
+        1750761435.4456286,
+        [
+            "-Wall"
+        ],
+        "ok"
+    ],
+    "src/dll/dll_test_add.c": [
+        1750761435.4456286,
+        [
+            "-Wall"
+        ],
+        "ok"
+    ],
+    "src/dll/dll_test_set.c": [
+        1750761846.6729097,
+        [
+            "-Wall"
+        ],
+        "ok"
+    ],
+    "src/main.c": [
+        1750757339.3869302,
+        [
+            "-Wall"
+        ],
+        "ok"
+    ]
+}
