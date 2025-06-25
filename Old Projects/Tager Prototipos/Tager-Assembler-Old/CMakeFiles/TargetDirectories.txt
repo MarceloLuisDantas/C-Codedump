@@ -1,3 +1,0 @@
-/home/marcelo/Documentos/Tager-Assembler/CMakeFiles/tager.dir
-/home/marcelo/Documentos/Tager-Assembler/CMakeFiles/edit_cache.dir
-/home/marcelo/Documentos/Tager-Assembler/CMakeFiles/rebuild_cache.dir

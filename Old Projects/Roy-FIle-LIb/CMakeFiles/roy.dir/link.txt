@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/roy.dir/src/roy.c.o CMakeFiles/roy.dir/src/file.c.o CMakeFiles/roy.dir/src/linked_list.c.o -o roy 

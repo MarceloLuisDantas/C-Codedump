@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/Tager.dir/src/Tager.c.o CMakeFiles/Tager.dir/src/Files/Files.c.o CMakeFiles/Tager.dir/src/Linked_List/linked_list.c.o CMakeFiles/Tager.dir/src/Linked_List/labels_list.c.o CMakeFiles/Tager.dir/src/Strings/Strings.c.o CMakeFiles/Tager.dir/src/Sintaxes/sintaxes.c.o -o Tager  -lm 

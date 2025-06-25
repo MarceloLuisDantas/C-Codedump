@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "litchi.h": "c",
-        "linked_list.h": "c",
-        "string.h": "c",
-        "math.h": "c",
-        "typeinfo": "c"
-    }
-}

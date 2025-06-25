@@ -1,9 +1,0 @@
-; Correct
-label:
-
-; Incorrect
-label
-123:
-:
-label: asd
-label 123
