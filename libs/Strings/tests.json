@@ -1,0 +1,12 @@
+{
+    "project": "Strings",
+    "tests": {
+        "string_test_new": [
+            "src/string_test_new.c",
+            "src/string.c"
+        ]
+    },
+    "test_flags": [
+        "-Wall"
+    ]
+}
