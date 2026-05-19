@@ -31,9 +31,9 @@ void load_file(char *path, char **content) {
 }
 
 void *count(void *args) {
-    struct timespec t;
-    t.tv_nsec = 1;
-    t.tv_sec = 0;
+    // struct timespec t;
+    // t.tv_nsec = 1;
+    // t.tv_sec = 0;
 
     // Carrega o arquivo
     char *file_name = args;
@@ -61,13 +61,7 @@ void *count(void *args) {
         final += 1;
     }
 
-    
-    long local_total_copy = TOTAL;
-    printf("Total em \"%s\" = %li\n", file_name, f_total);
-    nanosleep(&t, NULL); // delay simulado
-    local_total_copy += f_total;
-    TOTAL = local_total_copy;
-    return 0;
+    return (void *)f_total;
 }
 
 int main() {
@@ -82,9 +76,11 @@ int main() {
         pthread_create(&threads[i-1], NULL, count, copia);
     }
 
-    // Inicializa as threads
+    // espera as threads
     for (int i = 0; i < 10; i++) {
-        pthread_join(threads[i], NULL);
+        int retorno;
+        pthread_join(threads[i], (void **)&retorno);
+        TOTAL += retorno;
     }
     
     printf("Total nos 10 arquivos = %li\n", TOTAL);
